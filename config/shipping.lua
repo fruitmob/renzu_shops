@@ -1,4 +1,4 @@
-shared.supplierlimit = 100 -- how many item will be deliver for every order
+shared.supplierlimit = 1000 -- how many item will be deliver for every order
 shared.discount = 0.75 -- 25% discount from supplier
 
 -- Shipping Company - this is the config for shipping , all store order will go to shipping job

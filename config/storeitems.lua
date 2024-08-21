@@ -7,82 +7,12 @@ return {
 		{ lvl = 1, name = 'donut', price = 30 , category = 'food'},
 		{ lvl = 1, name = 'sandwich', price = 30 , category = 'food'},
 		{ lvl = 2, name = 'lighter', price = 20 , category = 'misc'},
-		{ lvl = 2, name = 'redw', price = 1000 , category = 'TOBACCO'},
-		{ lvl = 2, name = 'marlboro', price = 1000 , category = 'TOBACCO'},
-
 		{ lvl = 2, name = 'phone', price = 1000 , category = 'gadget'},
 		{ lvl = 2, name = 'radio', price = 1000 , category = 'gadget'},
 		{ lvl = 2, name = 'latte', price = 150 , category = 'beverages'},
 
-		{ lvl = 1, name = 'tomatosauce', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'burgerpatty', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'tacoshells', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'ground_beef', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'cheese', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'tomato', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'pasta', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'onion', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'mayonaise', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'hotsauce', price = 5 , category = 'ingredients'},
-		{ lvl = 1, name = 'lettuce', price = 5 , category = 'ingredients'},
-		{ lvl = 1, name = 'tacosauce', price = 7 , category = 'ingredients', disable = true}, -- disable tag, to disable the item from showing in shop UI. while this can be disable and enable tru store manage
-		{ lvl = 1, name = 'fish', price = 5 , category = 'wet foods'},
-		{ lvl = 1, name = 'beef', price = 5 , category = 'wet foods'},
-		{ lvl = 1, name = 'chicken', price = 5 , category = 'wet foods'},
-		{ lvl = 1, name = 'martini', price = 5 , category = 'liquor'},
-		{ lvl = 1, name = 'bread', price = 15 , category = 'ingredients'},
-		{ lvl = 1, name = 'hotdog', price = 25 , category = 'ingredients'},
-		{ lvl = 1, name = 'fishingrod', price = 200 , category = 'fishing'},
-		{ lvl = 1, name = 'fishbait', price = 50, category = 'fishing'},
-		{ lvl = 1, name = 'garden_shovel', price = 1000 , category = 'seeds'},
-		{ lvl = 1, name = 'garden_pitcher', price = 1000, category = 'seeds'},
-		{ lvl = 1, name = 'pickle_seed', price = 100 , category = 'seeds'},
-		{ lvl = 1, name = 'potato_seed', price = 100 , category = 'seeds'},
-		{ lvl = 1, name = 'tomato_seed', price = 100 , category = 'seeds'},
-		{ lvl = 1, name = 'wheat_seed', price = 100 , category = 'seeds'},
-		{ lvl = 1, name = 'carrot_seed', price = 100 , category = 'seeds'},
-		{ lvl = 1, name = 'corn_seed', price = 100 , category = 'seeds'},
-	
-		
-		{ lvl = 1, name = 'playerbooth', price = 50000 , category = 'misc', 
-			metadata = { -- ox_inventory supported only
-				name = 'marketbooth',
-				label = 'Market Booth', -- custom label name to set from metadatas
-				model = `ch_prop_ch_gazebo_01`,
-				description = 'can be used for market booth',
-				type = 'legal',
-				blacklists = { -- blacklist the list of items here from appearing to shop
-					['weapon_pistol'] = true, -- lowercase only
-				},
-			}
-		},
-		{ lvl = 1, name = 'playerbooth', price = 50000 , category = 'misc', 
-			metadata = { -- ox_inventory supported only
-				name = 'blackmarketbooth',
-				label = 'Black Market Booth', -- custom label name to set from metadatas
-				model = `ch_prop_ch_gazebo_01`,
-				description = 'can be used for black market booth',
-				type = 'illegal',
-				whitelists = { -- if whitelist. only this items will appear on the shops
-					['weapon_pistol'] = true, -- lowercase only
-				}
-			}
-		},
-
-
-		-- metadatas type item
-		{ lvl = 1, name = 'burger', price = 80 , category = 'food', metadata = { -- ox_inventory supported only
-				label = 'Cheese Burger', -- custom label name to set from metadatas
-				cheese = true,
-				name = 'cheeseburger', -- identifier important
-				hunger = 500000,
-				image = 'cheeseburger',
-				description = 'Burger with Cheese',
-				customrandomname = 'custom text'
-			},
-		},
 		{ lvl = 1, name = 'burger', price = 20 , category = 'food', metadata = { -- ox_inventory supported only
-				label = 'Angels Burger', -- custom label name to set from metadatas
+				label = 'Murders Burger', -- custom label name to set from metadatas
 				cheese = true,
 				name = 'angelsburger', -- identifier important
 				hunger = 100000,
@@ -122,11 +52,63 @@ return {
 	),
 
 	BlackMarketArms = {
-		-- bluprints
+		-- Existing Weapons
 		{ name = 'WEAPON_ASSAULTRIFLE', price = 85000, category = 'Weapon', currency = 'black_money', stock = 15 },
 		{ name = 'WEAPON_PISTOL50', price = 55000, category = 'Weapon', currency = 'black_money', stock = 15 },
 		{ name = 'WEAPON_ASSAULTSMG', price = 75000, category = 'Weapon', currency = 'black_money', stock = 15 },
+		
+		-- New Weapons
+		{ name = 'WEAPON_COMBATPISTOL', price = 50000, category = 'Weapon', currency = 'black_money', stock = 10 },
+		{ name = 'WEAPON_CARBINERIFLE_MK2', price = 95000, category = 'Weapon', currency = 'black_money', stock = 12 },
+		{ name = 'WEAPON_PUMPSHOTGUN_MK2', price = 75000, category = 'Weapon', currency = 'black_money', stock = 10 },
+		{ name = 'WEAPON_MACHINEPISTOL', price = 55000, category = 'Weapon', currency = 'black_money', stock = 10 },
+		{ name = 'WEAPON_SMG_MK2', price = 70000, category = 'Weapon', currency = 'black_money', stock = 10 },
+	
+		-- Additional Weapons
+		{ name = 'WEAPON_SWITCHBLADE', price = 800, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_CERAMICPISTOL', price = 5000, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_MILITARYRIFLE', price = 23000, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_CROWBAR', price = 900, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_DBSHOTGUN', price = 10000, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_FLAREGUN', price = 10000, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_STICKYBOMB', price = 700000, metadata = { registered = false }, currency = 'black_money' },
+		{ name = 'WEAPON_SMOKEGRENADE', price = 3000, metadata = { registered = false }, currency = 'black_money' },
+	
+		-- Attachments
+		{ name = 'at_clip_extended_rifle', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Extended Rifle Clip: Increases ammo capacity. Compatible with Assault Rifle and Carbine Rifle MK2.' },
+		{ name = 'at_grip', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Grip: Improves weapon stability. Compatible with Assault Rifle, Carbine Rifle MK2, and SMG MK2.' },
+		{ name = 'at_scope_medium', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Medium Scope: Enhances mid-range accuracy. Compatible with Assault Rifle, Carbine Rifle MK2, and SMG MK2.' },
+		{ name = 'at_flashlight', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Tactical Flashlight: Illuminates your target. Compatible with Assault Rifle, SMG MK2, Combat Pistol, and others.' },
+		{ name = 'at_suppressor_light', price = 7000, currency = 'black_money', description = 'Light Suppressor: Reduces firing noise and muzzle flash. Compatible with Pistol .50, Combat Pistol, SMG MK2, and Machine Pistol.' },
+		{ name = 'at_clip_extended_pistol', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Extended Pistol Clip: Increases ammo capacity. Compatible with Pistol .50 and Combat Pistol.' },
+		{ name = 'at_clip_extended_smg', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Extended SMG Clip: Increases ammo capacity. Compatible with Assault SMG, SMG MK2, and Machine Pistol.' },
+		{ name = 'at_clip_drum_smg', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'SMG Drum: Greatly increases ammo capacity. Compatible with Assault SMG, SMG MK2, and Machine Pistol.' },
+		{ name = 'at_clip_extended_shotgun', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Extended Shotgun Clip: Increases ammo capacity. Compatible with Pump Shotgun MK2.' },
+		{ name = 'at_clip_drum_shotgun', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Shotgun Drum: Greatly increases ammo capacity. Compatible with Pump Shotgun MK2.' },
+		{ name = 'at_suppressor_heavy', price = 10000, metadata = { registered = false }, currency = 'black_money', description = 'Tactical Suppressor: Reduces firing noise and muzzle flash. Compatible with Pump Shotgun MK2.' },
+		{ name = 'at_compensator', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Compensator: Reduces recoil during rapid fire. Compatible with Carbine Rifle MK2 and SMG MK2.' },
+		{ name = 'at_scope_small', price = 1500, category = 'Attachment', currency = 'black_money', stock = 10, description = 'Small Scope: Enhances short to mid-range accuracy. Compatible with SMG MK2.' },
 	},
+	
+	WormsFunHouse = {
+		-- Simplified items for debugging
+		{ name = 'WEAPON_RPG', price = 1000000, metadata = { registered = false }, stock = 5, currency = 'black_money' },
+		{ name = 'ecstasy1', price = 200, currency = 'black_money' },
+		{ name = 'lsd1', price = 300, currency = 'black_money' },
+		{ name = 'magicmushroom', price = 250, currency = 'black_money' },
+		{ name = 'peyote', price = 400, currency = 'black_money' },
+		{ name = 'weed_blunt', price = 50, currency = 'black_money' },
+		{ name = 'weed_joint', price = 30, currency = 'black_money' },
+		{ name = 'weed_package', price = 500, currency = 'black_money' },
+		{ name = 'coke_access', price = 5000, currency = 'black_money' },
+		{ name = 'meth_access', price = 5000, currency = 'black_money' },
+		{ name = 'weed_access', price = 5000, currency = 'black_money' },
+		{ name = 'heroin_syringe', price = 1000, currency = 'black_money' },
+		{ name = 'crack_pipe', price = 300, currency = 'black_money' },
+		{ name = 'xanaxpill', price = 100, currency = 'black_money' },
+	},
+	
+	
 	
 	LiquorStore = {
 		{ name = 'water', price = 350, category = 'drinks' },

@@ -2,7 +2,7 @@
 -- location indexes
 return {
 
-	['ClothingShop'] = {
+	--[[['ClothingShop'] = {
 		moneytype = 'money',
 		name = 'ClothingShop',
 
@@ -15,7 +15,7 @@ return {
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		},
-	},
+	},]]--
 
 	['Balls8'] = {
 		moneytype = 'money',
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	
-	PondCafe = {
+	--[[PondCafe = {
 		moneytype = 'money',
 		name = 'PondCafe',
 		--groups = 'ambulance',
@@ -39,9 +39,9 @@ return {
 		locations = {
 			vector3(1116.9136962891,-640.98645019531,56.825714111328),
 		}
-	},
+	},]]--
 	
-	MechanicSupply = {
+	--[[MechanicSupply = {
 		groups = {'mechanic','police'},
 		moneytype = 'money',
 		name = 'Mechanic Supply',
@@ -51,7 +51,7 @@ return {
 		locations = {
 			vector3(-213.81652832031,-1334.6248779297,30.13641166687),
 		}
-	},
+	},]]--
 
 	General = {
 		moneytype = 'money',
@@ -87,7 +87,7 @@ return {
 		}
 	},
 
-	VehicleShop = {
+	--[[VehicleShop = {
 		moneytype = 'money',
 		type = 'vehicle',
 		name = 'Vehicle Shop',
@@ -96,13 +96,11 @@ return {
 		},
 		locations = {
 			vec3(-53.079696655273,-1096.7937011719,26.42),
-			vec3(-797.6484375,-1512.2006835938,1.595212),
 		},
 		targets = {
 			vec3(-54.497680664063,-1097.7269287109,26.323600769043),
-			vec3(-797.6484375,-1512.2006835938,1.595212697982),
 		}
-	},
+	},]]--
 
 	YouTool = {
 		--groups = 'police',
@@ -115,7 +113,7 @@ return {
 
 		}, locations = {
 			vec3(2747.025390625,3473.0822753906,55.683399200439),
-			vec3(343.35479736328,-1297.6322021484,32.688446044922)
+			--vec3(343.35479736328,-1297.6322021484,32.688446044922)
 		}
 	},
 
@@ -170,7 +168,7 @@ return {
 			{ lvl = 2, name = 'armour', category = 'Tools', price = 200, metadata = { description = 'pang pakunat' } },
 
 		}, locations = {
-			vec3(454.99395751953,-983.08898925781,30.689611434)
+			vec3(436.74884033203,-989.70672607422,32.475814819336)
 		}
 	},
 
@@ -204,7 +202,16 @@ return {
 		name = 'Black Market (Arms)',
 		locations = {
 			vec3(591.57434082031,-3279.8911132813,6.06),
-			--vec3(163.0451, -1238.1116, 15.0734)
+			--vec3(896.27, -1828.21, 22.34),
+		}
+	},
+	
+	WormsFunHouse = {
+		moneytype = 'black_money',
+		name = 'Worms FunHouse',
+		locations = {
+			vec3(1062.99, -264.32, 50.97),
+			--vec3(896.27, -1828.21, 22.34),
 		}
 	},
 }

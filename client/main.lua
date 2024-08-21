@@ -98,7 +98,7 @@ self.addTarget = function(coord,msg,callback,server,var,delete,auto)
 		name = msg,
 		drawSprite = true,
 		debugPoly = false,
-		distance = 1.5,
+		distance = 2.5,
 		minZ = coord.z,
 		maxZ = coord.z+0.39,
 		useZ = true
@@ -111,7 +111,7 @@ self.addTarget = function(coord,msg,callback,server,var,delete,auto)
 				job = var.shop?.groups,
 				useZ = true,
 				canInteract = function(entity, distance, coords, name)
-					return distance < 1.5
+					return distance < 2.5
 				end,
 				action = function()
 					self.Active = lib.table.deepclone(var)
@@ -131,10 +131,10 @@ end
 
 self.nearest = {}
 self.NearestPoint = function(data,msg,callback,server,var,delete,auto)
-	local drawdist = 0.6
+	local drawdist = 2.6
 
 	if self.shoptype == 'vehicle' or var.type == 'storeowner' then
-		drawdist = 1.2
+		drawdist = 2.2
 	end
 
 	local nearest = data.distance < drawdist and data
@@ -1698,7 +1698,6 @@ self.OpenShop = function(data)
 				local storedata = self.StoreData(v2.label)
 				self.moneytype = v2.moneytype
 				self.itemType = v2.item
-				self.vehicletype = v2.vehicletype
 				data.shop.label = v2.label
 				data.shop.inventory = v2.supplieritem
 				self.Active.shop.inventory = v2.supplieritem
@@ -1780,7 +1779,6 @@ self.OpenShop = function(data)
 	local black_money = self.GetAccounts('black_money')
 	local bank = self.GetAccounts('bank')
 	local shop_data = self.StoreData(data.shop.label)
-
 	SendNUIMessage({
 		type = 'shop',
 		data = {
@@ -2266,18 +2264,7 @@ self.Handlers = function()
 						end
 						cb(true)
 					end
-				end,{
-					vehicletype = self.vehicletype,
-					owner = self.Owner, 
-					groups = self.Active?.shop?.groups, 
-					finance = financedata, 
-					items = data.items, 
-					data = itemdata, 
-					index = self.Active.index, 
-					type = data.type, 
-					shop = self.Active.shop.type or self.shopidentifier, 
-					moneytype = self.moneytype
-				})
+				end,{owner = self.Owner, groups = self.Active?.shop?.groups, finance = financedata, items = data.items, data = itemdata, index = self.Active.index, type = data.type, shop = self.Active.shop.type or self.shopidentifier, moneytype = self.moneytype})
 				self.Owner = nil
 			end
 		elseif data.msg == 'close' then
